@@ -1,7 +1,6 @@
-# .github/workflows/train.yml
 name: Train ML Model
 
-on: [push]  # runs on every push
+on: [push]
 
 jobs:
   build:
@@ -19,5 +18,8 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements.txt
 
-    - name: Run training
+    - name: Run training script
       run: python train_model.py
+
+    - name: Print success message
+      run: echo "✅ Model training completed successfully!"
